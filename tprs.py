@@ -11,8 +11,9 @@ import time
 
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Benjamin Kwame Ampah\AppData\Local\Tesseract-OCR'
-
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR'
+# r'C:\Users\Benjamin Kwame Ampah\AppData\Local\Tesseract-OCR'
+# r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 def getImage(img_url):
     # Send a GET request to the URL to get the image data
     response = requests.get(img_url)
@@ -49,7 +50,7 @@ text = pytesseract.image_to_string(image)
 # Print the recognized text
 print(text)
 passWord = driver.find_element(By.NAME, "pwd")
-passWord.send_keys("test")
+passWord.send_keys("xxxxxxx")
 
 login = driver.find_element(By.CLASS_NAME , "login100-form-btn").click()
 time.sleep(15)
